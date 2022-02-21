@@ -1,2 +1,1 @@
-Naufal Dzaki Imtiyaz - 24060121120014
-Praktikum 1
+Naufal Dzaki Imtiyaz - 24060121120014 - Praktikum 1
