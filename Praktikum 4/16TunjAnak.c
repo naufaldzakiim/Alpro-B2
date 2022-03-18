@@ -18,15 +18,21 @@ int main(){ /*Program Utama*/
     printf("Masukkan gaji pokok = ");
     scanf("%d", &gajiPokok);
 
-    if (jumlahAnak <= 3){
-        tunjangan = jumlahAnak * (gajiPokok * 10/100);
+    if (jumlahAnak < 0 || gajiPokok <= 0){
+        printf("Jumlah anak tidak bisa negatif dan Gaji pokok harus positif");
     }
 
     else{
-        tunjangan = 3 * (gajiPokok * 10/100);
-    }
+        if (jumlahAnak <= 3){
+            tunjangan = jumlahAnak * (gajiPokok * 10/100);
+        }
 
-    printf("Tunjangan yang diberikan = %d", tunjangan);
+        else{
+            tunjangan = 3 * (gajiPokok * 10/100);
+        }
+
+        printf("Tunjangan yang diberikan = %d", tunjangan);
+    }
 
     return 0;
 }
