@@ -18,31 +18,37 @@ int main(){ /*Program Utama*/
     printf("Masukkan daya pemakaian = ");
     scanf("%d", &daya);
 
-    if (golongan == 1){
-        if (daya < 100){
-            tarif = 100 * 1000;
-        }
-        else if (daya >= 100 && daya < 1000){
-            tarif = daya * 1000;
-        }
-        else{
-            tarif = daya * 1000 * 110/100;
-        }
+    if (golongan <= 0 || golongan >= 3 || daya <= 0){
+        printf("Daya pemakaian harus positif dan golongan hanya dapat 1 s/d 2");
     }
-
+    
     else{
-        if (daya < 100){
-            tarif = 100 * 2000;
+        if (golongan == 1){
+            if (daya < 100){
+                tarif = 100 * 1000;
+            }
+            else if (daya >= 100 && daya < 1000){
+                tarif = daya * 1000;
+            }
+            else{
+                tarif = daya * 1000 * 110/100;
+            }
         }
-        else if (daya >= 100 && daya < 1000){
-            tarif = daya * 2000;
-        }
-        else{
-            tarif = daya * 2000 * 110/100;
-        }
-    }
 
-    printf("Golongan %d, pemakaian %d kWH, maka jumlah bayarnya %d", golongan, daya, tarif);
+        else{
+            if (daya < 100){
+                tarif = 100 * 2000;
+            }
+            else if (daya >= 100 && daya < 1000){
+                tarif = daya * 2000;
+            }
+            else{
+                tarif = daya * 2000 * 110/100;
+            }
+        }
+
+        printf("Golongan %d, pemakaian %d kWH, maka jumlah bayarnya %d", golongan, daya, tarif);
+    }
     
     return 0;
 }
