@@ -5,7 +5,7 @@
 
 /*Header file*/
 #include <stdio.h>
-#define RANGE 100000000 /*nilai maksimal dari elemen array yang akan disorting*/
+#define RANGE 100000 /*nilai maksimal dari elemen array yang akan disorting*/
 
 int main(){ /*Program Utama*/
 /*Kamus*/
